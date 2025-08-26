@@ -1,0 +1,81 @@
+<!-- Message Board -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>留言板</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div id="header"></div>
+		
+		<!-- ===== 页面横幅 ===== -->
+		<section class="page-banner">
+			<img src="img/banner1.jpg" alt="Banner" class="banner-bg">
+			<div class="banner-overlay"></div>
+			<div class="banner-content">
+				<h1>留言板</h1>
+				<div class="breadcrumb">
+					当前位置：
+					<a href="ContactUs.html">联系我们 ></a>
+					<a href="#"> 留言板 </a>
+				</div>
+			</div>
+		</section>
+		
+		<main class="content">
+			<section class="page-header">
+				<p class="sub-title">Message Board</p>
+				<h1>留言板</h1>
+				<hr>
+			</section>
+			
+			<section class="message-board">
+				<div class="input-group">
+					<div class="input-row">
+						<label class="label-left">姓名：</label>
+						<input type="text" class="input-right" placeholder="请输入您的姓名"/>
+					</div>
+					<div class="input-row">
+						<label class="label-left">年龄：</label>
+						<input type="text" class="input-right" placeholder="请输入您的年龄"/>
+					</div>
+					<div class="input-row">
+						<label class="label-left">性别：</label>
+						<select class="input-right">
+							<option value="">请选择您的性别</option>
+							<option value="male">男</option>
+							<option value="female">女</option>
+						</select>
+					</div>
+					<div class="input-row">
+						<label class="label-left">手机号码：</label>
+						<input type="text" class="input-right" placeholder="请输入您的手机号码"/>
+					</div>
+					<div class="input-row">
+						<label class="label-left">电子邮箱：</label>
+						<input type="text" class="input-right" placeholder="请输入您的电子邮箱"/>
+					</div>
+					<div class="input-row">
+						<label class="label-left">留言内容：</label>
+						<input type="text" class="input-right textarea" placeholder="请输入您的留言内容"/>
+					</div>
+					<div class="submit">
+						<button>提交留言</button>
+					</div>
+				</div>
+				
+				
+			</section>
+			
+			
+			
+		</main>
+		
+		<div id="footer"></div>
+		
+		<script src="js/main.js"></script>
+	</body>
+</html>
