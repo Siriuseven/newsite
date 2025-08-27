@@ -1,0 +1,44 @@
+{
+	"header": {
+		"mainpage":"home",
+		"hCI1":"Company Introduction",
+		"hCI2":"Company Introduction",
+		"hEQ":"Enterprise Qualifications",
+		"hCC":"Corporate Culture",
+		"hEP": "Hirano Environmental Protection",
+		"hPC1":"Product Center",
+		"hb":"Battery",
+		"hc":"Chargers",
+		"he":"Energy Storage",
+		"hCU1":"Contact Us",
+		"hCU2":"Contact Information",
+		"hMB":"Message Board",
+		"hJU":"Join Us",
+		"hCR":"Campus Recruitment",
+		"hSR":"Social Recruitment",
+		"hCoC":"Cooperative Customers"
+		
+	},
+	"footer":{
+		"fCI1":"Company Introduction",
+		"fPC":"Product Center",
+		"fCU1":"Contact Us",
+		"fCoC1":"Cooperative Customers",
+		"fCI2":"Company Introduction",
+		"fb":"Battery",
+		"fCU2":"Contact Information",
+		"fCoC2":"Cooperative Customers",
+		"fEQ":"Enterprise Qualifications",
+		"fc":"Chargers",
+		"fMB":"Message Board",
+		"fCC":"Corporate Culture",
+		"fES":"Energy Storage",
+		"fJU":"Join Us",
+		"fEP":"Hirano Environmental Protection",
+		"fname":"Shanghai Hirano Environmental Technoology Co.Ltd.",
+		"faddress":"Address：上海青浦区崧煌路77号",
+		"ftel":"Tel：+86-21-59895111",
+		"ffax":"Fax：+86-21-59895118"
+	},
+	"companyintro":"Shanghai Plain Environmental Protection Technology Co., Ltd. is a Shanghai-level high-tech enterprise integrating R&D, manufacturing and trade.Based on the concept of fine manufacturing, Shanghai Plain is committed to the manufacture and sales of high-quality products and components.The main products are environmentally friendly and clean energy systems for electric industrial vehicles, including lithium-ion batteries, sodium-ion batteries and multi-functional charger products."
+}
