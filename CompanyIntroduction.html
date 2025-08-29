@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>企业介绍</title>
+	<title id="titleCI">企业介绍</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,11 +18,11 @@
 		<div class="banner-bg"></div>
 		<div class="banner-overlay"></div>
 		<div class="banner-content">
-			<h1>企业介绍</h1>
-			<div class="breadcrumb">
-				当前位置：
-				<a href="#">企业介绍 ></a>
-				<a href="#"> 企业介绍 </a>
+			<h1 id="phCI">企业介绍</h1>
+			<div class="breadcrumb" >
+				<span id="nowlocation">当前位置：</span>
+				<a href="#" id="nlCI1">企业介绍 ></a>
+				<a href="#" id="nlCI2"> 企业介绍 </a>
 			</div>
 		</div>
 	</section>
@@ -36,12 +36,12 @@
 		</section>
 
 		<section class="text-intro">
-			<p id="companyintro">
+			<p id="companyintro1">
 				上海平野环保科技有限公司是一家集研发制造和贸易于一身的上海市级高科技企业。
 				上海平野基于精细制造的理念，致力于高品质产品和零部件的制造和销售。
 				主营产品为电动产业车辆专用的环保清洁能源系统，包括锂离子电池、钠离子电池和多功能充电机产品。
 			</p>
-			<p>
+			<p id="companyintro2">
 				本企业的零件和产品被丰田汽车、三菱、小松建机等世界五百强企业采用。
 				企业长期和多家日本企业及中国航天等科研机构建立合作关系，采用标准化设计，
 				产品技术可靠，得到广大用户的信赖与好评。
@@ -51,50 +51,72 @@
 		<section class="shownum">
 			<div class="shownum-item">
 				<div class="shownum-number">2001<sup>年</sup></div>
-				<div class="shownum-text">公司成立</div>
+				<div class="shownum-text" id="emp1">公司成立</div>
 			</div>
 			<div class="shownum-item">
-				<div class="shownum-number">1.5<sup>亿元</sup></div>
-				<div class="shownum-text">投资总额</div>
+				<div class="shownum-number">1.5<sup>+</sup></div>
+				<div class="shownum-text" id="emp2">投资总额（亿元）</div>
 			</div>
 			<div class="shownum-item">
-				<div class="shownum-number">2.5<sup>亿元</sup></div>
-				<div class="shownum-text">年销售额</div>
+				<div class="shownum-number">2.5<sup>+</sup></div>
+				<div class="shownum-text" id="emp3">年销售额（亿元）</div>
 			</div>
 		</section>
 		
 
-		<section class="normalImg">
+		<div class="normalImg">
 			<img src="img/CompanyIntroduction.jpg" />
-		</section>
-		
-		<div class="pagesubtitle">
-			<h1>集团构成</h1>
 		</div>
 		
-		
-		
 		<div class="pagesubtitle">
-			<h1>全球布局</h1>
+			<h1 id="gcomposition">集团构成</h1>
 		</div>
 		
-		
-		
-		<div class="pagesubtitle">
-			<h1>回馈社会</h1>
+		<div class="normalImg">
+			<img src="img/集团架构图.jpg" alt="集团架构图"/>
 		</div>
 		
-		<section class="text-intro">
-			<p>凭一份信心，托起我们的梦想，靠一颗诚心，实现我们的理想！
+		<div class="pagesubtitle">
+			<h1 id="globallayout">全球布局</h1>
+		</div>
+		
+		<div class="normalImg">
+			<img src="img/market.png" alt="全球布局"/>
+		</div>
+		
+	</main>
+	
+	<div class="pagesubtitle">
+		<h1 id="history">发展历史</h1>
+	</div>
+	
+	<div class="imgShow">
+		<img src="img/history.png" >
+	</div>
+		
+	<div class="pagesubtitle">
+		<h1 id="fbs1">回馈社会</h1>
+	</div>
+		
+	<section class="content">
+		<div class="text-intro">
+			<p id="fbs2">
+				凭一份信心，托起我们的梦想，靠一颗诚心，实现我们的理想！
 				我们的点滴用心是在播撒希望，也终将会收获一份心灵的慰藉！
 			</p>
-			<p>
+			<p id="fbs3">
 				平野桂兰基金会由董事长吴坤秀先生发起，基金会自2008年成立至今11年，
 				已累计资助困难家庭学生182人，今后将继续扩大资助范围，尽企业的一份社会责任。
 			</p>
-		</section>
+		</div>
+	</section>
 		
-		
+	<section class="imgShow">
+		<img src="img/gbc1.png" />
+		<img src="img/gbc2.png" />
+		<img src="img/gbc3.png" />
+		<img src="img/gbc4.png" />
+	</section>	
 		
 		<!-- <section class="page-header">
 			<p class="sub-title">Business Philosophy</p>
@@ -136,19 +158,14 @@
 						树根的电力形状的设计象征我们的能源系统给人类源源不绝的能量，使人类生活更富有生命力。
 					</p>
 				</section> -->
-	</main>
+	
 		
-	<section class="imgShow">
-		<img src="img/gbc1.png" />
-		<img src="img/gbc2.png" />
-		<img src="img/gbc3.png" />
-		<img src="img/gbc4.png" />
-	</section>
+	
 		
 	<!-- ===== 公共底部 ===== -->
 	<div id="footer"></div>
   
 	<script src="js/main.js"></script>
-	
+	<script src="js/dragImg.js"></script>
 </body>
 </html>

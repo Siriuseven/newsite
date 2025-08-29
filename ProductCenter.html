@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>产品中心</title>
+		<title id="titlePC">产品中心</title>
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
@@ -16,60 +16,53 @@
 			<img src="img/banner1.jpg" alt="Banner" class="banner-bg">
 			<div class="banner-overlay"></div>
 			<div class="banner-content">
-				<h1>产品中心</h1>
-				<div class="breadcrumb">
+				<h1 id="phPC">产品中心</h1>
+				<div class="breadcrumb" id="nowlocation">
 					当前位置：
-					<a href="#"> 产品中心 </a>
+					<a href="#" id="nlPC"> 产品中心 </a>
 				</div>
 			</div>
 		</section>
 		
 		<div class="pagesubtitle">
-			<h1>主营产品</h1>
+			<h1 id="mainproduct">主营产品</h1>
 		</div>
 		
 		<!-- 动态三图 -->
 		<section class="prodContainer">
 			<div class="prodImg-section" data-index="0">
 				<div class="prodImg-content">
-					<img src="img/banner2.jpg" alt="电池产品图"/>
+					<img src="img/KMC115-SH302C182-NKA-01.png" alt="电池产品图"/>
 					<div class="prodOverlay">
-						<h3 class="prodTitle">电池</h3>
-						<p class="description">
-							主打产品：24V/48V/80V锂电池
-							容量包括：206AH/302AH/604AH/840AH，种类齐全
-							新兴产品：钠离子电池与水冷电池
+						<h3 class="prodTitle" id="PCb">电池</h3>
+						<p class="description" id="pPCbD">
+							面向工业车辆的锂离子电池组（搭载自主研发的 BMS）
 						</p>
-						<button class="prodBTN">了解更多</button>
+						<a href="battery.html" class="prodBTN" id="moreb">了解更多</a>
 					</div>
 				</div>
 			</div>
 			<div class="prodImg-section" data-index="1">
 				<div class="prodImg-content">
-					<img src="img/banner3.jpg" alt="充电机产品图"/>
+					<img src="img/cdj.png" alt="充电机产品图"/>
 					<div class="prodOverlay">
-						<h3 class="prodTitle">充电机</h3>
-						<p class="description">
-							业内很多电池厂家都没有充电机设计制造能力，
-							只能外购充电机，系统故障风险增加，质量问题不明确，
-							扯皮现象很多。平野自主研发的充电机能充分避免上述问题，
-							大大降低系统风险。
+						<h3 class="prodTitle" id="PCc">充电机</h3>
+						<p class="description" id="PCcD">
+							快速逆变器式充电器（DC24V～DC800V）
 						</p>
-						<button class="prodBTN">了解更多</button>
+						<a href="chargers.html" class="prodBTN" id="morec">了解更多</a>
 					</div>
 				</div>
 			</div>
 			<div class="prodImg-section" data-index="2">
 				<div class="prodImg-content">
-					<img src="img/banner4.jpg" alt="储能产品图"/>
+					<img src="img/es.png" alt="储能产品图"/>
 					<div class="prodOverlay">
-						<h3 class="prodTitle">储能柜</h3>
-						<p class="description">
-							利用退役叉车电池，减少资源浪费；延长电池使用寿命，推动循环经济。
-							经过20余道专业评估筛选工序，确保电池性能和安全；
-							叉车电池整包利用，降低梯次集成中的安全隐患。
+						<h3 class="prodTitle" id="PCes">储能系统</h3>
+						<p class="description" id="PCesD">
+							储能系统（动力电池再利用）
 						</p>
-						<button class="prodBTN">了解更多</button>
+						<a href="EnergyStorage.html" class="prodBTN" id="morees">了解更多</a>
 					</div>
 				</div>
 			</div>
@@ -83,7 +76,7 @@
 			</section> -->
 			
 			<div class="pagesubtitle">
-				<h1>三大优势</h1>
+				<h1 id="3adv">三大优势</h1>
 			</div>
 			<!-- <div class="tech-matrix">
 				<div class="tech-item">
@@ -111,23 +104,24 @@
 			<div class="advantage-wrapper">
 				<div class="advantage-container" id="advantageContainer">
 					<div class="advantage-item">
-						<div class="advantage-title">技术优势</div>
+						<div class="advantage-title" id="techadv1">技术优势</div>
 						<div class="advantage-description">
-							<p>自有全套锂电池核心技术</p>
-							<p>自有的电芯筛选、封装技术确保电池模组安全、稳定、寿命长</p>
-							<p>期望使用寿命可达10年</p>
+							<p id="techadv2">自有全套锂电池核心技术</p>
+							<p id="techadv3">自有的电芯筛选、封装技术确保电池模组安全、稳定、寿命长</p>
+							<p id="techadv4">期望使用寿命可达10年</p>
 						</div>
 					</div>
 					<div class="advantage-item">
-						<div class="advantage-title">质量优势</div>
-						<div class="advantage-description">
-							通过日本丰田叉车最严苛的测试要求—IEC62619試験
+						<div class="advantage-title" id="quaadv1">质量优势</div>
+						<div class="advantage-description" id="quaadv2">
+							品质严格把控，从电芯测试到组装双重确认再到出货检测，做到“品质至上、全员参与、持续改善、客户满意”的公司方针。
+							产品通过日本丰田叉车最严苛的测试要求—IEC62619試験
 						</div>
 					</div>
 					<div class="advantage-item">
-						<div class="advantage-title">服务优势</div>
+						<div class="advantage-title" id="seradv1">服务优势</div>
 						<div class="advantage-description">
-							<p>支持定制化开发</p>
+							<p id="seradv2">多样化的产品规格，适用于各种领域，支持定制化设计。</p>
 							<!-- <p>如有任何定制化需求请联系我们</p> -->
 						</div>
 					</div>
@@ -135,109 +129,109 @@
 			</div>
 			
 			<div class="pagesubtitle">
-				<h1>平野产品优点</h1>
+				<h1 id="merits">平野产品优点</h1>
 			</div>
 			<div class="comparison-table">
 				<table>
 					<thead>
 						<tr>
-							<th width="20%">项目</th>
-							<th width="40%">平野优力哺</th>
-							<th width="40%">他社产品</th>
+							<th width="20%" id="item">项目</th>
+							<th width="40%" id="hirano">平野优力哺</th>
+							<th width="40%" id="other">他社产品</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td>BMS</td>
 							<td>
-								<p>自主研发、生产BMS&软件</p>
-								<p>采集精度高</p>
-								<p>BMS+BMU的管理系统保证电池高效、安全、稳定运行</p></td>
+								<p id="bms-h1">自主研发、生产BMS&软件</p>
+								<p id="bms-h2">采集精度高</p>
+								<p id="bms-h3">BMS+BMU的管理系统保证电池高效、安全、稳定运行</p></td>
 							<td>
-								<p>外部购买BMS&软件</p>
-								<p>采集精度不高</p>
-								<p>无法保证电池高效、安全、稳定运行</p></td>
+								<p id="bms-o1">外部购买BMS&软件</p>
+								<p id="bms-o2">采集精度不高</p>
+								<p id="bms-o3">无法保证电池高效、安全、稳定运行</p></td>
 						</tr>
 						<tr>
-							<td>电池均衡技术</td>
+							<td id="equli">电池均衡技术</td>
 							<td>
-								<p>有，电池使用中主动均衡电池压差</p>
-								<p>长期使用后，充满电后使用时间可保障</p>
-								<p>电池寿命长</p></td>
+								<p id="equ-h1">有，电池使用中主动均衡电池压差</p>
+								<p id="equ-h2">长期使用后，充满电后使用时间可保障</p>
+								<p id="equ-h3">电池寿命长</p></td>
 							<td>
-								<p>无，2~3年后由于电芯压差大而需要返厂均衡电芯压差</p>
-								<p>长期使用后，充满电后使用时间大幅下降</p>
-								<p>电池寿命短</p></td>
+								<p id="equ-o1">无，2~3年后由于电芯压差大而需要返厂均衡电芯压差</p>
+								<p id="equ-o2">长期使用后，充满电后使用时间大幅下降</p>
+								<p id="equ-o3">电池寿命短</p></td>
 						</tr>
 						<tr>
-							<td>电芯</td>
+							<td id="cell">电芯</td>
 							<td>
-								<p>CATL 中国航天</p>
-								<p>高品质A级品电芯</p>
+								<p id="cell-h1">CATL 中国航天</p>
+								<p id="cell-h2">高品质A级品电芯</p>
 							</td>
 							<td>
-								<p>外部采购各种便宜电芯</p>
-								<p>电芯品质可靠度无法保证</p>
+								<p id="cell-o1">外部采购各种便宜电芯</p>
+								<p id="cell-o2">电芯品质可靠度无法保证</p>
 							</td>
 						</tr>
 						<tr>
-							<td>IP等级</td>
-							<td>IP65\IP54 IP等级</td>
+							<td id=c</td>
+							<td>IP65\IP54</td>
 							<td>IP21</td>
 						</tr>
 						<tr>
-							<td>加热系统</td>
+							<td id="heat">加热系统</td>
 							<td>
-								<p>自启动、各种环境随充随用</p>
-								<p>监测电池0℃后自动启动电池加热系统</p>
+								<p id="heat-h1">自启动、各种环境随充随用</p>
+								<p id="heat-h2">监测电池0℃后自动启动电池加热系统</p>
 							</td>
 							<td>
-								<p>电池使用受环境影响大</p>
-								<p>充电机检测电池温度后再启动加热系统、加热时间长</p>
-							</td>
-						</tr>
-						<tr>
-							<td>品质保证</td>
-							<td>
-								<p>品质行内翘楚</p>
-								<p>三菱、丰田、小松原厂认证</p>
-							</td>
-							<td>
-								<p>品质参差不齐</p>
-								<p>无原厂认证</p>
+								<p id="heat=o1">电池使用受环境影响大</p>
+								<p id="heat=o2">充电机检测电池温度后再启动加热系统、加热时间长</p>
 							</td>
 						</tr>
 						<tr>
-							<td>充电</td>
+							<td id="quality">品质保证</td>
 							<td>
-								<p>自主研发高频充电机</p>
-								<p>与锂电池匹配性更好</p>
-								<p>无充电&售后后顾之忧</p>
+								<p id="quality-h1">品质行内翘楚</p>
+								<p id="quality-h2">三菱、丰田、小松原厂认证</p>
 							</td>
 							<td>
-								<p>外部购买充电机</p>
-								<p>品质&售后无保证</p>
+								<p id="quality-o1">品质参差不齐</p>
+								<p id="quality-o2">无原厂认证</p>
 							</td>
 						</tr>
 						<tr>
-							<td>质保时间</td>
+							<td id="charge">充电</td>
 							<td>
-								<p>良心质保</p>
-								<p>BMS检测输出电流10A后计时，计算实际工作时间</p>
+								<p id="charge-h1">自主研发高频充电机</p>
+								<p id="charge-h2">与锂电池匹配性更好</p>
+								<p id="charge-h3">无充电&售后后顾之忧</p>
 							</td>
-							<td>开机就累计使用时间，工作时间虚高</td>
+							<td>
+								<p id="charge-o1">外部购买充电机</p>
+								<p id="charge-o2">品质&售后无保证</p>
+							</td>
 						</tr>
 						<tr>
-							<td>售后服务</td>
-							<td>售后专家对应</td>
-							<td>参差不齐</td>
+							<td id="qat">质保时间</td>
+							<td>
+								<p id="qat-h1">良心质保</p>
+								<p id="qat-h2">BMS检测输出电流10A后计时，计算实际工作时间</p>
+							</td>
+							<td id="qat-o1">开机就累计使用时间，工作时间虚高</td>
+						</tr>
+						<tr>
+							<td id="as">售后服务</td>
+							<td id="as-h">售后专家对应</td>
+							<td id="as-o">参差不齐</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
 			
 			<div class="pagesubtitle">
-				<h1>强大的全球后台系统 有效监控电池运行</h1>
+				<h1 id="backsys">强大的全球后台系统 有效监控电池运行</h1>
 			</div>
 			
 			<section class="backsystem-container">
@@ -245,8 +239,8 @@
 				        <div class="row">
 				            <div class="col col-left">
 				                <div class="backsystem-content">
-				                    <h3>全球监控系统</h3>
-				                    <p>描述描述描述描述描述描述描述</p>
+				                    <h3 id="backsys1">全球监控系统</h3>
+				                    <p id="backsys2">描述描述描述描述描述描述描述</p>
 				                </div>
 				            </div>
 				            <div class="col col-right">
@@ -265,8 +259,8 @@
 				            </div>
 				            <div class="col col-right">
 				                <div class="backsystem-content">
-				                    <h3>手机小程序</h3>
-				                    <p>描述描述描述描述描述描述描述</p>
+				                    <h3 id="minip1">手机小程序</h3>
+				                    <p id="minip2">描述描述描述描述描述描述描述</p>
 				                </div>
 				            </div>
 				        </div>

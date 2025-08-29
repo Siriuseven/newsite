@@ -19,7 +19,7 @@ body {
 }
 
 .navbar .logo img {
-	height: 50px;
+	height: 40px;
 }
 
 .nav-menu {
@@ -126,12 +126,12 @@ body {
 .footer {
 	background: #99cc33;
 	color: #fff;
-	padding: 40px;
+	padding: 30px;
 	/* padding-top: 40px;
 	padding-bottom: 60px; */
 	display: flex;
 	justify-content: center; /* 整体居中 */
-	height: 180px;
+	height: 160px;
 }
 
 .footer-container {
@@ -150,16 +150,16 @@ body {
 }
 
 .footer-left h2{
-	margin: 10px 0px 15px 0px;
+	margin: 8px 0px 5px 0px;
 }
 
 .footer-left p {
 	font-size: 14px;
-	margin: 10px 0px 0px 0px;
+	margin: 8px 0px 0px 0px;
 }
 
 .footer-left img {
-	width: 200px;
+	width: 160px;
 	/* margin-bottom: 10px; */
 }
 
@@ -171,13 +171,13 @@ body {
 }
 .footer-center th {
 	text-align: left;
-	padding-bottom: 10px;
+	padding-bottom: 6px;
 	font-size: 20px;
 	color: white;
 	font-weight: bold;
 }
 .footer-center td{
-	padding: 8px 0;
+	padding: 6px 0;
 	font-size: 14px;
 	color: #FFFFFF;
 	margin: 5px;
@@ -199,10 +199,10 @@ body {
 }
 .footer-right img {
 	width: 100px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 .footer-right p {
-	margin: 5px 0;
+	margin: 0 0 5px 0;
 	font-size: 14px;
 	text-align: right;
 }
@@ -225,7 +225,7 @@ body {
 	left: 0;
 	object-fit: cover;   /* 图片自动裁剪填充 */
 	z-index: 0;
-	background-image: url('img/banner1.jpg');
+	background-image: url(../img/banner1.jpg);
 	background-size: cover;
 }
 
@@ -357,8 +357,8 @@ body {
 
 
 .normalImg img {
-	max-width: 80%;
-	border: 1px solid #ccc;
+	max-width: 100%;
+	border: none;
 	margin-bottom: 10px;
 	margin: 20px;
 }
@@ -372,7 +372,7 @@ body {
 
 .slides {
 	display: flex;
-	transition: transform 0.5s ease;
+	transition: transform 0.5s ease-in-out;
 }
 
 .slide {
@@ -453,6 +453,13 @@ body {
 }
 .shownum-number sub{
 	vertical-align: sub;
+}
+
+@media (max-width: 768px) {
+  .shownum {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 /* =======经营理念======= */
@@ -561,20 +568,6 @@ body {
 }
 
 
-/* =======企业历史横向滚动======= */
-.test{
-	white-space: nowrap;
-	overflow-x: auto;
-	overflow-y: hidden;
-	margin-top: -100px;
-}
-.test img{
-	cursor: auto;
-	height: auto;
-	width: auto;
-	max-width: none;
-}
-
 /* =======联系方式======= */
 .contactUs{
 	display: flex;
@@ -655,7 +648,7 @@ body {
 
 .input-right{
 	flex: 1;
-	padding: 0.75rem;
+	padding: 1rem;
 	border: 1px solid #ddd;
 	font-size: 20px;
 	transition: border-color 0.3s ease;
@@ -663,10 +656,15 @@ body {
 
 .input-right select{
 	cursor: pointer;
+	color: #999;
+	flex: 1;
+	padding: 0.75rem;
+	border: 1px solid #ddd;
+	font-size: 20px;
 }
 
 .textarea {
-	min-height: 100px;
+	min-height: 150px;
 	resize: vertical;
 }
 
@@ -784,9 +782,11 @@ body {
 	width: 100%;
 	height: 400px;
 	white-space: nowrap;
-	overflow-x: auto;
+	overflow-x: hidden;
 	overflow-y: hidden;
 	margin-bottom: 100px;
+	cursor: grab;
+	user-select: none;
 }
 
 .imgShow img{
@@ -794,6 +794,13 @@ body {
 	height: 100%;
 	width: auto;
 	object-fit: cover;
+	border-radius: 16px;
+	margin: 0 10px;
+	/* cursor: grab; */
+}
+
+.imgShow.active{
+	cursor: grabbing;
 }
 
 /* 岗位信息处 */
@@ -833,8 +840,8 @@ body {
 	font-size: 40px;
 }
 
-.overlay button {
-	padding: 10px 20px;
+.overlay .button {
+	padding: 20px 50px;
 	font-size: 20px;
 	border: none;
 	border-radius: 5px;
@@ -843,9 +850,10 @@ body {
 	cursor: pointer;
 	width: 200px;
 	height: 60px;
+	text-decoration: none;
 }
 
-.overlay button:active {
+.overlay .button:active {
     transform: translateY(2px);      /* 按钮向下移动一点，看起来凹进去 */
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); /* 阴影变小/变暗，增强按下感 */
     background-color: #88b822;      /* 可选：颜色稍微变深一点，增强反馈 */
@@ -899,6 +907,84 @@ body {
 	line-height: 2.5rem;
 }
 
+.Benefits{
+	width: 80%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* 每行2个 */
+	gap: 3rem;
+	margin: 50px auto;
+}
+.Benefits-item{
+	background-color: #f5f5f5;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+	display: flex;
+	flex-direction: column;
+	height: 200px;
+	position: relative;
+}
+.Benefits-content{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	text-align: center;
+	height: 100%;
+	box-sizing: border-box;
+}
+.Benefits-content .ico{
+	width: 80px;
+	height: 80px;
+	object-fit: cover;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+.Benefits-content .title{
+	margin: 0;
+	font-size: 20px;
+	color: black;
+}
+.Benefits-overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #99CC33;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0; /* 默认不显示 */
+	visibility: hidden;
+	transform: translateY(-100%);
+	transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+}
+.Benefits-overlay-content{
+	text-align: center;
+	padding: 30px;
+	max-width: 90%;
+}
+.Benefits-overlay-content .title{
+	font-size: 20px;
+	margin: 0 0 12px ; 
+}
+.Benefits-overlay-content .desc{
+	font-size: 15px;
+	line-height: 1.5;
+	margin: 0;
+}
+.Benefits-item:hover .Benefits-overlay{
+	transform: translateY(0);
+	opacity: 1;
+	visibility: visible;
+}
+.Benefits-item:hover .Benefits-content{
+	opacity: 0;
+}
+
+
 /* =======合作客户======= */
 .coCust{
 	width: 100%;
@@ -909,10 +995,10 @@ body {
 }
 
 .cust-item-link{
-	 text-decoration: none; /* 去掉下划线，看起来不像普通链接 */
-	  color: inherit;        /* 防止文字颜色被链接影响 */
-	  display: block;        /* 让 <a> 填满整个 .grid-item 的空间 */
-	  height: 100%;
+	text-decoration: none; /* 去掉下划线，看起来不像普通链接 */
+	color: inherit;        /* 防止文字颜色被链接影响 */
+	display: block;        /* 让 <a> 填满整个 .grid-item 的空间 */
+	height: 100%;
 }
 
 .cust-item{
@@ -946,7 +1032,7 @@ body {
 	display: flex;
 	width: 100vw;
 	height: 100vh;
-	height: 100dvh;
+	height: 85dvh;
 }
 .prodImg-section{
 	flex: 1;
@@ -1042,6 +1128,7 @@ body {
 	transition: all 0.6s ease 0.3s;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	text-decoration: none;
 	
 }
 .prodBTN:hover{
@@ -1254,7 +1341,7 @@ body {
 }
 
 .row:nth-child(odd) .col-right {
-	background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+	background-image: url('../img/bs1.png');
 	background-size: cover;
 	background-position: center;
 	position: relative;
@@ -1262,7 +1349,7 @@ body {
 
 /* 偶数行：左侧图片，右侧文字 */
 .row:nth-child(even) .col-left {
-	background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+	background-image: url('../img/bs2.jpg');
 	background-size: cover;
 	background-position: center;
 	position: relative;
@@ -1742,8 +1829,8 @@ body {
 	text-align: center;
 }
 .culture-content .ico{
-	width: 50px;
-	height: 50px;
+	width: 80px;
+	height: 80px;
 	object-fit: cover;
 	margin-bottom: 20px;
 }
@@ -1774,8 +1861,8 @@ body {
 	max-width: 90%;
 }
 .culture-overlay-content .ico{
-	width: 25px;
-	height: 25px;
+	width: 45px;
+	height: 45px;
 	object-fit: cover;
 	margin-bottom: 10px;
 }
