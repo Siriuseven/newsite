@@ -121,6 +121,156 @@ body {
 .lang-switch button:hover {
 	color: #99cc33; 
 }
+.lang-switch button.active {
+	/* background-color: #99CC33; */
+	color: #99CC33;
+}
+.lang-options {
+	display: block;
+	flex-direction: column;
+	position: absolute;
+	background: white;
+	border: 1px solid #ddd;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.lang-switch.open .lang-options {
+	/* display: flex; */
+	display: none;
+}
+
+.lang-toggle{
+	display: none;
+}
+
+.mobile-menu-toggle{
+	display: none;
+}
+.lang-switch .short {
+  display: none;
+}
+
+/* ========== Mobile Responsive Styles (<= 768px) ========== */
+@media (max-width: 768px) {
+	/* 1. 导航栏整体布局调整 */
+	.navbar {
+		flex-direction: row;
+		align-items: flex-start; /* 左对齐 */
+		padding: 10px;
+		height: auto; /* 不固定死高度 */
+	}
+
+	/* 2. Logo 保持左上角 */
+	.navbar .logo{
+		/* margin-bottom: 10px; */
+		margin-top: 10px;
+	}
+
+	.navbar .logo img {
+		height: 25px; 
+	}
+
+	/* 3. 隐藏原生导航菜单 ul（桌面横向菜单） */
+	.nav-menu {
+		display: none; /* 默认隐藏，JS 控制显示 */
+		flex-direction: column;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background: white;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+		border-top: 1px solid #eee;
+	}
+
+	/* 4. 显示汉堡菜单按钮（移动端专用） */
+	.mobile-menu-toggle {
+		display: block;
+		background: none;
+		border: none;
+		font-size: 24px;
+		cursor: pointer;
+		padding: 5px 10px;
+		align-self: flex-end; /* 汉堡按钮靠右 */
+	}
+
+	/* 5. 当菜单打开时，显示 nav-menu（通过 JS 加一个类名如 .menu-open） */
+	.navbar.menu-open .nav-menu {
+		display: flex;
+	}
+
+	/* 6. 移动端菜单项：垂直排列，去掉 hover 触发，改为点击 */
+	.nav-menu li {
+		width: 100%;
+		position: static; /* 取消 relative，避免子菜单定位混乱 */
+	}
+
+	.nav-menu a {
+		padding: 12px 20px;
+		font-size: 16px; /* 移动端友好字体 */
+		border-bottom: 1px solid #eee;
+	}
+
+	.nav-menu a:hover {
+		color: #99cc33;
+		background: #f9f9f9; /* 可选：hover 背景色 */
+	}
+
+	/* 7. 隐藏原生 PC 端 submenu（桌面端下拉） */
+	.submenu {
+		display: none !important; /* 强制隐藏，移动端不用 hover */
+		position: static;
+		box-shadow: none;
+		background: #99cc33;
+		border-top: 1px solid #ddd;
+	}
+
+	/* 8. 移动端：点击展开子菜单（需 JS 辅助，见下文） */
+	.has-submenu.active > .submenu {
+		display: block !important;
+		width: 100%;
+		background-color: #99CC33;
+		
+	}
+
+	/* 9. 语言切换按钮：移动端可选隐藏/简化 */
+	.lang-switch {
+		margin-left: auto;
+		/* margin-top: 10px; */
+		margin-right: 10px;
+	}
+
+	.lang-switch button {
+		font-size: 16px;
+		padding: 10px 8px;
+		margin: 2px;
+	}
+	.lang-toggle{
+		display: block;
+	}
+	.lang-options {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		background: white;
+		border: 1px solid #ddd;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+	}
+	
+	.lang-switch button[data-lang="zh"]::after { content: "中"; }
+	.lang-switch button[data-lang="en"]::after { content: "EN"; }
+	.lang-switch button[data-lang="ja"]::after { content: "日"; }
+	.lang-switch button {
+		font-size: 14px;
+	}
+	.lang-switch button span { display: none; } /* 隐藏原本的文字 */
+	/* .lang-switch .full {
+	    display: none;
+	  }
+	.lang-switch .short {
+	    display: inline;
+	} */
+
+}
 
 /* ===== 页脚 ===== */
 .footer {
@@ -206,6 +356,35 @@ body {
 	font-size: 14px;
 	text-align: right;
 }
+@media (max-width: 768px){
+	.footer{
+		height: auto;
+		padding: 20px;
+		width: 116%;
+	}
+	.footer-container{
+		display: flex;
+		flex-direction: column;
+		column-gap: 10px;
+		width: 100%;
+	}
+	.footer-center{
+		display: none;
+	}
+	.footer-left,
+	.footer-right{
+		align-items: flex-start;
+		text-align: left;
+		margin-left: 40px;
+	}
+	.footer-right img{
+		display: none;
+	}
+	.footer-left p,
+	.footer-right p {
+		font-size: 12px;
+	}
+}
 
 /* ===== 页面横幅 ===== */
 .page-banner {
@@ -275,6 +454,41 @@ body {
 	color: #cce699;
 }
 
+@media (max-width: 768px){
+	.page-banner {
+		position: relative;
+		width: 120vw;
+		height: 300px;
+		overflow: hidden;
+	}
+	.page-banner .banner-bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;   /* 图片自动裁剪填充 */
+		z-index: 0;
+		background-image: url(../img/banner1.jpg);
+		background-size: cover;
+	}
+	.banner-content{
+		position: absolute;
+		left: 0%;
+		width: 90%;
+		padding-left: 10%;
+	}
+	.banner-content h1 {
+		font-size: 30px;
+		margin-top: 200px;
+		align-self: flex-start;
+	}
+	.banner-content .breadcrumb{
+		align-self: flex-start;
+		font-size: 13px;
+	}
+}
+
 /* ===== 页面通用内容样式 ===== */
 .content {
 	margin: 40px auto;
@@ -282,6 +496,7 @@ body {
 	width: 50%;
   
 }
+
 /* 页面标题栏 */
 .page-header {
 	position: relative;
@@ -320,8 +535,6 @@ body {
     top: 110px;
     position: relative;
     height: 2px;
-	
-	
 }
 
 /* 通用的文字介绍部分 */
@@ -353,6 +566,7 @@ body {
 	margin-top: 40px;
 	margin-bottom: 40px;
 	text-align: center;
+	align-items: center;
 }
 
 
@@ -361,8 +575,31 @@ body {
 	border: none;
 	margin-bottom: 10px;
 	margin: 20px;
+	align-items: center;
 }
 
+/* 通用部分的移动端设置 */
+@media (max-width: 768px) {
+	.content{
+		width: 100%;
+		margin: 40px 20px;
+		
+	}
+	.page-header h1{
+		font-size: 38px;
+	}
+	.page-header .sub-title{
+		font-size: 50px;
+	}
+	.page-header hr{
+		display: none;
+	}
+	.text-intro p{
+		font-size: 14px;
+		margin-left: 20px;
+	}
+	
+}
 
 /* ===== 首页轮播图 ===== */
 .carousel {
@@ -566,6 +803,12 @@ body {
   padding: 0.5rem;
   background: #f8f9fa;
 }
+@media (max-width: 768px) {
+	.certificates {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr); /* 每行3个 */
+	}
+}
 
 
 /* =======联系方式======= */
@@ -611,8 +854,23 @@ body {
 
 .contact-image img{
 	max-width: 100%;
+	
 	height: auto;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+	.contactUs{
+		flex-direction: column;
+	}
+	.contact-text{
+		flex: 0 1 30%;
+		background: #f8f8f8;
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		border-radius: 8px;
+	}
 }
 
 /* =======留言板======= */
@@ -694,15 +952,22 @@ body {
 
 /* 手机端适配（可选） */
 @media (max-width: 768px) {
+	.message-board{
+		width: 90%;
+	}
     .input-row {
         flex-direction: column;
         align-items: stretch;
+		gap: 1rem;
     }
     .label-left {
         margin-bottom: 0.5rem;
+		flex: 0 0 30px;
+		font-size: 20px;
     }
     .input-right {
         width: 100%;
+		padding: 10px;
     }
 }
 
@@ -776,6 +1041,14 @@ body {
 	margin-bottom: 50px;
 	font-size: 20px;
 }
+@media (max-width:768px) {
+	.pagesubtitle{
+		text-align: center;
+		width: 100%;
+		margin-bottom: 50px;
+		font-size: 16px;
+	}
+}
 
 /* 横向照片墙 */
 .imgShow{
@@ -801,6 +1074,12 @@ body {
 
 .imgShow.active{
 	cursor: grabbing;
+}
+@media (max-width:768px) {
+	.imgShow{
+		height: 300px;
+		margin: 0 0 0 20px;
+	}
 }
 
 /* 岗位信息处 */
@@ -859,6 +1138,33 @@ body {
     background-color: #88b822;      /* 可选：颜色稍微变深一点，增强反馈 */
 }
 
+@media (max-width: 768px) {
+	.job{
+		flex-direction: column;
+	}
+	.overlay {
+		top: 45%;
+	}
+	.overlay h2 {
+		margin: 0 0 2rem 0;    /* 标题下方留点间距 */
+		font-size: 20px;
+	}
+	.overlay .button {
+		padding: 15px 25px;
+		font-size: 15px;
+		border: none;
+		border-radius: 5px;
+		background-color: #99cc33;
+		color: white;
+		cursor: pointer;
+		width: 100px;
+		height: 30px;
+		text-decoration: none;
+	}
+	
+	
+}
+
 /* 招聘信息详情  校招&社招 */
 .jobtable table{
 	width: 100%;
@@ -903,8 +1209,17 @@ body {
 }
 
 .detail-content p{
-	text-indent: 2em;
+	/* text-indent: 2em; */
 	line-height: 2.5rem;
+}
+@media (max-width:768px) {
+	.jobtable th,td{
+		font-size: 18px;
+		padding: 15px;
+	}
+	.detail-content{
+		padding: 15px 5px;
+	}
 }
 
 .Benefits{
@@ -983,6 +1298,24 @@ body {
 .Benefits-item:hover .Benefits-content{
 	opacity: 0;
 }
+@media (max-width: 768px) {
+	.Benefits-item{
+		height: 150px;
+	}
+	.Benefits-content .ico{
+		width: 50px;
+		height: 50px;
+	}
+	.Benefits-content .title{
+		font-size: 16px;
+	}
+	.Benefits-overlay-content .title{
+		font-size: 16px;
+	}
+	.Benefits-overlay-content .desc{
+		font-size: 13px;
+	}
+}
 
 
 /* =======合作客户======= */
@@ -1025,6 +1358,17 @@ body {
 	margin: auto;
 }
 
+@media (max-width:768px) {
+	.coCust{
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr); /* 每行3个 */
+		gap: 3rem;
+		margin: 50px 0;
+	}
+}
+
+
 /* =======产品介绍相关======= */
 
 /* 响应式的三图动态效果 */
@@ -1032,7 +1376,7 @@ body {
 	display: flex;
 	width: 100vw;
 	height: 100vh;
-	height: 85dvh;
+	height: 60dvh;
 }
 .prodImg-section{
 	flex: 1;
@@ -1465,16 +1809,43 @@ body {
 	margin: 0 0 1rem 0;
 }
 
-.produIntro-text button{
+.produIntro-text .button{
 	font-size: 20px;
 	/* border: 4px solid #99CC33; */
 	border: none;
 	border-radius: 15px;
 	background-color: #99cc33;
-	width: 40%;
-	padding: 15px 0;
+	/* width: 40%; */
+	width: 170px;
+	padding: 15px 0 15px 20px;;
 	margin: 0 0 2rem 2rem;
 	color: white;
+	text-decoration: none;
+}
+
+@media (max-width: 768px) {
+	.produIntro{
+		display: flex;
+		flex-direction: column;
+	}
+	.produIntro-img{
+		text-align: center;
+	}
+	.produIntro-img img{
+		max-width: 80%;
+		height: auto;
+		width: auto;
+	}
+	.produIntro-text h2{
+		font-size: 20px;
+	}
+	.produIntro-text p{
+		font-size: 15px;
+	}
+	.produIntro-text .button{
+		width: 120px;
+		font-size: 13px;
+	}
 }
 
 /* 核心技术 */
@@ -1569,7 +1940,7 @@ body {
 /* =======产品详情页======= */
 .product-detail-container {
     display: flex;
-    max-width: 50%;
+    max-width: 80%;
     margin: 20px auto 100px auto;
     gap: 30px;
     padding: 0 30px;
@@ -1582,7 +1953,7 @@ body {
 /* 左侧产品图片区域 */
 .product-images {
     flex: 1;
-    max-width: 500px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -1718,8 +2089,9 @@ body {
     }
     
     .product-images {
-        max-width: none;
+        max-width: 80%;
         order: 2;
+		margin-bottom: 30px;
     }
     
     .product-specs {
@@ -1736,7 +2108,7 @@ body {
 
 @media (max-width: 768px) {
     .product-detail-container {
-        margin: 10px;
+        margin: 10px 10px 50px 30px;
         padding: 20px;
         gap: 20px;
     }
