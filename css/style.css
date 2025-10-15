@@ -1211,6 +1211,7 @@ body {
 .detail-content p{
 	/* text-indent: 2em; */
 	line-height: 2.5rem;
+	font-size: 22px;
 }
 @media (max-width:768px) {
 	.jobtable th,td{
@@ -1223,7 +1224,7 @@ body {
 }
 
 .Benefits{
-	width: 80%;
+	width: 60%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr); /* 每行2个 */
 	gap: 3rem;
