@@ -32,7 +32,7 @@
 				<hr>
 			</section>
 			
-			<section class="message-board">
+			<!-- <section class="message-board">
 				<div class="input-group">
 					<div class="input-row">
 						<label class="label-left">姓名：</label>
@@ -66,16 +66,61 @@
 						<button>提交留言</button>
 					</div>
 				</div>
-				
-				
+			</section> -->
+			
+			<!-- 使用Formspree表单 -->
+			<section class="message-board">
+				<form
+					id="message"
+					class="input-group"
+					action="https://formspree.io/f/mldokgky"
+					method="POST"
+				>
+					<div class="input-row">
+						<label class="label-left" for="name">姓名：</label>
+						<input type="text" id="name" name="name" class="input-right" placeholder="请输入您的姓名" required/>
+						<div class="error-message" id="nameError">请输入有效的姓名</div>
+					</div>
+					<div class="input-row">
+						<label class="label-left" for="age">年龄：</label>
+						<input type="text" id="age" name="age" class="input-right" placeholder="请输入您的年龄" min="1" max="120" required/>
+						<div class="error-message" id="ageError">请输入有效的年龄（1-120）</div>
+					</div>
+					<div class="input-row">
+						<label class="label-left" for="gender">性别：</label>
+						<select id="gender" name="gender" class="input-right" required>
+							<option value="">请选择您的性别</option>
+							<option value="male">男</option>
+							<option value="female">女</option>
+						</select>
+						<div class="error-message" id="genderError">请选择您的性别</div>
+					</div>
+					<div class="input-row">
+						<label class="label-left" for="phone">手机号码：</label>
+						<input type="tel" id="phone" name="phone" class="input-right" placeholder="请输入您的手机号码" required>
+						<div class="error-message" id="phoneError">请输入有效的手机号码</div>
+					</div>
+					<div class="input-row">
+						<label class="label-left" for="email">电子邮箱：</label>
+						<input type="email" id="email" name="email" class="input-right" placeholder="请输入您的电子邮箱" required>
+						<div class="error-message" id="emailError">请输入有效的电子邮箱</div>
+					</div>
+					<div class="input-row">
+						<label class="label-left" for="message">留言内容：</label>
+						<textarea id="message" name="message" class="input-right textarea" placeholder="请输入您的留言内容" required></textarea>
+						<div class="error-message" id="messageError">请输入留言内容</div>
+					</div>
+					<div class="submit">
+						<button>提交留言</button>
+					</div>
+				</form>
 			</section>
-			
-			
 			
 		</main>
 		
 		<div id="footer"></div>
 		
 		<script src="js/main.js"></script>
+		<script src="js/messageform.js"></script>
 	</body>
 </html>

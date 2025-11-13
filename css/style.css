@@ -950,6 +950,25 @@ body {
     background-color: #88b822;      /* 可选：颜色稍微变深一点，增强反馈 */
 }
 
+.error-message {
+	color: #e74c3c;
+	font-size: 0.9rem;
+	margin-top: 5px;
+	width: 100%;
+	padding-left: 135px;
+	display: none;
+}
+
+.success-message {
+	background: #d4edda;
+	color: #155724;
+	padding: 15px;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	text-align: center;
+	sdisplay: none;
+}
+
 /* 手机端适配（可选） */
 @media (max-width: 768px) {
 	.message-board{
