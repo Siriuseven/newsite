@@ -2197,6 +2197,32 @@ body {
     }
 }
 
+/* =====文件下载===== */
+.file_download {
+	max-width: 70%;
+	margin: 50px auto 50px auto;
+	padding: 20px 30px;
+	background: white;
+	border-radius: 12px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.file_download a {
+	display: block;
+	font-size: 16px;
+	margin: 20px 0;
+	color: black;
+	text-decoration: none;
+}
+
+.file_download a:visited {
+	color: #9c3;
+}
+
+.file_download a:hover {
+	color: #9c3;
+}
+
 /* =======企业文化======= */
 .culture-container{
 	width: 100%;
