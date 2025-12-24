@@ -2199,7 +2199,7 @@ body {
 
 /* =====文件下载===== */
 .file_download {
-	max-width: 70%;
+	/* max-width: 70%; */
 	margin: 50px auto 50px auto;
 	padding: 20px 30px;
 	background: white;
